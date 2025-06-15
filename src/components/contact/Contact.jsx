@@ -24,7 +24,7 @@ const Contact = () => {
     const formDatab = new FormData(formEle);
 
     fetch(
-      "https://docs.google.com/spreadsheets/d/1A35swBbSZd2rcLbrSqNaYRZZoEbWWkgx7_nKO6RZ5PE/edit?gid=0#gid=0",
+      "https://script.google.com/macros/s/AKfycbwg_HbWfxOGuY_CILww_i4CPIm-xkAmNEvHTrxu1rYaNJlIh3YIt9JZJp4cQQMkHKpItQ/exec",
       {
         method: "POST",
         body: formDatab,
