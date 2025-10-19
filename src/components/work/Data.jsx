@@ -8,7 +8,12 @@ import foodDelivery from "../../assets/foodDelivery.png";
 import SmartLearning from "../../assets/SmartLearning.png";
 import CeylonGrand from "../../assets/CeylonGrand.png";
 import LoginPage from "../../assets/LoginPage.png";
-
+import PowerFit from "../../assets/PowerFit.png";
+import EduCore from "../../assets/EduCore.png";
+import EasyCounter from "../../assets/EasyCounter.png";
+import FitnessTracker from "../../assets/FitnessTracker.png";
+import Health_Care_App from "../../assets/Health_Care_App.png";
+import cleverly from "../../assets/Cleverly.png";
 
 export const projectsData = [
     {
@@ -18,22 +23,37 @@ export const projectsData = [
         category: 'web',
         link: 'https://github.com/sewminiJayawardhana/BuyNow',
     },
+
     {
         id: 2,
+        image: PowerFit,
+        title: 'PowerFit : Gym web site',
+        category: 'web',
+        link: 'https://github.com/sewminiJayawardhana/PowerFit',
+    },
+    {
+        id: 3,
+        image: EduCore,
+        title: 'EduCore : Educational institution website',
+        category: 'web',
+        link: 'https://github.com/sewminiJayawardhana/EduCore',
+    },
+    {
+        id: 4,
         image: EBook,
         title: 'E-Book System : Library Management System',
         category: 'web',
         link: 'https://github.com/sewminiJayawardhana/Library_Management_System',
     },
     {
-        id: 3,
+        id: 5,
         image: QRCode,
         title: ' QR Generator : For form Data',
         category: 'web',
         link: 'https://github.com/sewminiJayawardhana/QR-Generator-',
     },
     {
-        id: 4,
+        id: 6,
         image: TaskManager,
         title: 'Task Manager',
         category: 'web',
@@ -41,22 +61,37 @@ export const projectsData = [
     },
     
     {
-        id: 5,
+        id: 7,
         image: PerfectLeather,
         title: 'Leather_Products_Management_System',
         category: 'app',
         link: 'https://github.com/sewminiJayawardhana/Leather_Products_Management_System',
     },
-   
+
+    {
+        id: 8,
+        image: EasyCounter,
+        title: 'Word Counter App',
+        category: 'app',
+        link: 'https://github.com/sewminiJayawardhana/Easy-Counter',
+    },
     {
         id: 9,
+        image: FitnessTracker,
+        title: 'Fitness Tracker App',
+        category: 'app',
+        link: 'https://github.com/sewminiJayawardhana/Fitness-Tracker-App',
+    },
+   
+    {
+        id: 10,
         image: Calculator,
         title: 'Simple Calculator',
         category: 'app',
         link: 'https://github.com/sewminiJayawardhana/Simple-Calculator-',
     },
     {
-        id: 10,
+        id: 11,
         image: foodDelivery,
         title: 'Food Delivery App',
         category: 'designs',
@@ -64,25 +99,40 @@ export const projectsData = [
     },
     {
         id: 12,
+        image: Health_Care_App,
+        title: 'Health Care Mobile App UI Design',
+        category: 'designs',
+        link: 'https://www.figma.com/design/nu14eHYwxrwUb2Sm0NDIlG/Untitled?node-id=0-1&p=f&t=BcPbBDFPF2ZuVII9-0',
+    },
+    {
+        id: 13,
         image: SmartLearning,
         title: 'Landing Page for Learning Platform',
         category: 'designs',
         link: 'https://www.figma.com/design/OwYuJjgaHWFl6WpA0udCSC/Daily-UI---003?node-id=0-1&p=f&t=UHkumwpIHTTP1eGi-0',
     },
     {
-        id: 11,
+        id: 14,
+        image: cleverly,
+        title: 'Consumer Reviews App UI Design',
+        category: 'designs',
+        link: 'https://www.figma.com/design/7KNP2bquyt5IAdN3ljWaFc/Cleverly_UI?t=Nj9Yx1hoYVKeC4vo-1',
+    },
+    {
+        id: 15,
         image: CeylonGrand,
         title: 'Hotel Site UI',
         category: 'designs',
         link: 'https://www.figma.com/design/JUtB7QnBDCsjjGdhQ7zHQ7/Hotel-UI?node-id=0-1&p=f&t=P7Y1uspcrdh1tNfz-0',
     },
     {
-        id: 13,
+        id: 16,
         image: LoginPage,
         title: 'Login Page UI',
         category: 'designs',
         link: 'https://www.figma.com/design/vWrzklt7tXnFQZ7OaM2Uo1/LoginPage?node-id=0-1&p=f&t=UqkWEf7jK8kMGKTq-0',
     },
+    
 ];
 
 export const projectsNav = [

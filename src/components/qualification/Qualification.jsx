@@ -93,14 +93,14 @@ const Qualification = () => {
 
                 <div className="qualification__data">
                   <div>
-                    <h3 className="qualification__title">Secondary Education - Advanced Level</h3>
+                    <h3 className="qualification__title">Graduate Diploma in Software Engineering</h3>
                     <span className="qualification__subtitle">
-                      Walasmulla National School
+                      Institute of Java Software Engineering
                     </span>
 
                     <div className="qualification__calender">
                       <i className="uil uil-calender-alt"></i> 
-                      2020 - 2022
+                      2022 - 2023
                     </div>
                   </div>
                   <div>
@@ -116,12 +116,12 @@ const Qualification = () => {
                     <span className="qualification__line"></span>
                   </div>
                   <div>
-                    <h3 className="qualification__title">Secondary Education - O/L</h3>
+                    <h3 className="qualification__title">Secondary Education - Advanced Level</h3>
                     <span className="qualification__subtitle">
                       Walasmulla National School
                     </span>
                     <div className="qualification__calender">
-                      <i className="uil uil-calender-alt"></i> 2007 - 2020
+                      <i className="uil uil-calender-alt"></i> 2020 - 2022
                     </div>
                   </div>
                 </div>
