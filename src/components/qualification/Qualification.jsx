@@ -61,6 +61,7 @@ const Qualification = () => {
                     </h3>
                     <span className="qualification__subtitle">
                       University of Moratuwa
+                      <h5>NDT-IT</h5>
                     </span>
                     <div className="qualification__calender">
                       <i className="uil uil-calender-alt"></i> 2023 - Present
