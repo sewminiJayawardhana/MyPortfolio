@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { toast } from 'react-toastify';
 import { motion } from "framer-motion"; 
 import "./contact.css";
 
@@ -30,20 +31,36 @@ const Contact = () => {
         body: formDatab,
       }
     )
-      .then((res) => res.json())
+      .then(async (res) => {
+        // Try to parse JSON if present, but don't fail success just because body isn't JSON
+        let data = null;
+        const ct = res.headers.get('content-type') || '';
+        try {
+          if (ct.includes('application/json')) {
+            data = await res.json();
+          } else {
+            // Read text to avoid stream locking; ignore content
+            data = await res.text();
+          }
+        } catch (_) {}
+
+        if (!res.ok) {
+          const message = (data && data.error) || `Request failed (${res.status})`;
+          throw new Error(message);
+        }
+        return data;
+      })
       .then(() => {
         setFormData({
           name: "",
           email: "",
           project: "",
         });
+        toast.success('Sent successfully ✅', { icon: '📨' });
       })
       .catch((error) => { 
-        setFormData({
-          name: "",
-          email: "",
-          project: "",
-        });
+        // Keep the values so the user can try again, or clear if you prefer
+        toast.error(error?.message || 'Failed to send ❌');
       });
   };
 
@@ -78,11 +95,11 @@ const Contact = () => {
 
               <h3 className="contact__card-title">Email</h3>
               <span className="contact__card-data">
-                sewuminijayawardana23@gmail.com
+                sapsarasewmini@gmail.com
               </span>
 
               <a
-                href="mailto:sewuminijayawardana23@gmail.com"
+                href="mailto:sapsarasewmini@gmail.com"
                 className="contact__button"
               >
                 Write me{" "}

@@ -1,4 +1,6 @@
 import "./App.css";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Header from './components/header/Header';
 import Home from './components/home/Home';
 import Skills from './components/skills/Skills';
@@ -24,6 +26,7 @@ const App = () => {
                 <Contact/>
                 <Footer/>
             </main>
+            <ToastContainer position="top-right" theme="colored" autoClose={3000} closeOnClick pauseOnHover/>
         </>
     )
 }

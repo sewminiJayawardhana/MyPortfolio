@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import './skills.css';
 import Frontend from './Frontend';
 import Backend from './Backend';
+import Other from './Other';
 
 const Skills = () => {
   // Animation variants for the section
@@ -51,6 +52,7 @@ const Skills = () => {
       >
         <Frontend />
         <Backend />
+        <Other />
       </motion.div>
     </motion.section>
   );
