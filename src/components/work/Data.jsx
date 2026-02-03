@@ -14,6 +14,9 @@ import EasyCounter from "../../assets/EasyCounter.png";
 import FitnessTracker from "../../assets/FitnessTracker.png";
 import Health_Care_App from "../../assets/Health_Care_App.png";
 import cleverly from "../../assets/Cleverly.png";
+import CarRental from "../../assets/CarRental.png";
+import eventManagement from "../../assets/eventManagement.png";
+import clothingStore from "../../assets/clothingStore.png";
 
 export const projectsData = [
     {
@@ -92,41 +95,62 @@ export const projectsData = [
     },
     {
         id: 11,
+        image: CarRental,
+        title: 'CeylonRide - Car Rental Mobile App UI Design',
+        category: 'designs',
+        link: 'https://www.figma.com/design/AXdDmlbEHkEJ46xTZcomeI/UI-UX-Vehicle-Renting-Service-Sewmini-Jayawardhana?node-id=0-1&t=kmkwlziY4DydsqSQ-1',
+    },
+    {
+        id: 12,
+        image: eventManagement,
+        title: 'Event Management App UI Design',
+        category: 'designs',
+        link: 'https://www.figma.com/design/21g5K7FsVgKQtFOcbFMpow/UI-UX-Design-for-Event-Management-Platform?node-id=0-1&t=ghvP2eXId55Ssgro-1',
+    },
+    {
+        id: 13,
+        image: clothingStore,
+        title: 'Clothing Store App UI Design',
+        category: 'designs',
+        link: 'https://www.figma.com/design/fI8J3Boq9iPhXqVuNNzUxc/Clothing-Store-UI?node-id=1-2&t=ghvP2eXId55Ssgro-1',
+    },
+    {
+        id: 14,
         image: foodDelivery,
-        title: 'Food Delivery App',
+        title: 'Food Delivery App UI Design',
         category: 'designs',
         link: 'https://www.figma.com/design/2HpiDJO2P3LDw8Em2kFZhf/Fodd-Delivery?node-id=0-1&p=f&t=0alXwL0jCyuZaiWW-0',
     },
     {
-        id: 12,
+        id: 15,
         image: Health_Care_App,
         title: 'Health Care Mobile App UI Design',
         category: 'designs',
         link: 'https://www.figma.com/design/nu14eHYwxrwUb2Sm0NDIlG/Untitled?node-id=0-1&p=f&t=BcPbBDFPF2ZuVII9-0',
     },
     {
-        id: 13,
+        id: 16,
         image: SmartLearning,
         title: 'Landing Page for Learning Platform',
         category: 'designs',
         link: 'https://www.figma.com/design/OwYuJjgaHWFl6WpA0udCSC/Daily-UI---003?node-id=0-1&p=f&t=UHkumwpIHTTP1eGi-0',
     },
     {
-        id: 14,
+        id: 17,
         image: cleverly,
         title: 'Consumer Reviews App UI Design',
         category: 'designs',
         link: 'https://www.figma.com/design/7KNP2bquyt5IAdN3ljWaFc/Cleverly_UI?t=Nj9Yx1hoYVKeC4vo-1',
     },
     {
-        id: 15,
+        id: 18,
         image: CeylonGrand,
         title: 'Hotel Site UI',
         category: 'designs',
         link: 'https://www.figma.com/design/JUtB7QnBDCsjjGdhQ7zHQ7/Hotel-UI?node-id=0-1&p=f&t=P7Y1uspcrdh1tNfz-0',
     },
     {
-        id: 16,
+        id: 19,
         image: LoginPage,
         title: 'Login Page UI',
         category: 'designs',
