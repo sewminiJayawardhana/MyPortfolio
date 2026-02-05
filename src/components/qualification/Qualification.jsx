@@ -196,7 +196,7 @@ const Qualification = () => {
                     <span className="qualification__line"></span>
                   </div>
                   <div>
-                    <h3 className="qualification__title">Member of Moraspirirt</h3>
+                    <h3 className="qualification__title">Member of Moraspirirt <br /> Moratuwa University</h3>
                     <span className="qualification__subtitle">
                       Creative Design Pillar
                     </span>
