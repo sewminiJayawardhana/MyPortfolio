@@ -4,11 +4,12 @@ import AnimatedCursor from "react-animated-cursor";
 function AnimCursor() {
   return (
     <AnimatedCursor 
-      innerSize={20}
-      outerSize={30}
-      outerAlpha={0.2}
+      innerSize={8}
+      outerSize={35}
+      color="124, 58, 237"
+      outerAlpha={0.3}
       innerScale={0.7}
-      outerScale={5}
+      outerScale={4}
       clickables={[
         'a',
         'input[type="text"]',
@@ -21,6 +22,8 @@ function AnimCursor() {
         'textarea',
         'button',
         '.link',
+        '.services__button',
+        '.work__item',
       ]}
     />
   )

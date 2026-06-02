@@ -9,7 +9,7 @@ import Work from './components/work/Work';
 import Qualification from './components/qualification/Qualification';
 import Contact from './components/contact/Contact';
 import Footer from './components/footer/Footer';
-import AnimatedCursor from 'react-animated-cursor';
+import AnimCursor from './components/animCursor/AnimCursor';
 
 const App = () => {
 
@@ -17,7 +17,7 @@ const App = () => {
         <>
             <Header/>
             <main className='main'>
-                <AnimatedCursor/>
+                <AnimCursor/>
                 <Home/>
                 <Qualification/>
                 <Skills/>

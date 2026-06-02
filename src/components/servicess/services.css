@@ -6,9 +6,12 @@
 
 .services__content {
     position: relative;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border-color);
     background-color: var(--container-color);
+    backdrop-filter: blur(12px);
     padding: 6rem 0 2rem 2.5rem;
+    border-radius: 1.25rem;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease, border-color 0.4s ease;
 }
 
 .services__icon {
@@ -48,7 +51,8 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(11, 7, 24, 0.7);
+    backdrop-filter: blur(8px);
     z-index: var(--z-modal);
     display: flex;
     justify-content: center;
@@ -56,13 +60,15 @@
     padding: 0 1rem;
     opacity: 0;
     visibility: hidden;
-    transition: .3s;
+    transition: opacity .3s ease, visibility .3s ease;
 }
 
 .services__modal-content {
     width: 500px;
     position: relative;
-    background-color: var(--container-color);
+    background-color: rgb(26, 20, 44);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
     padding: 4.5rem 2.5rem 2.5rem;
     border-radius: 1.5rem;
 }
@@ -76,12 +82,8 @@
     cursor: pointer;
 }
 
-.services__modal-title,
-.services__modal-description {
-    text-align: center;
-}
-
 .services__modal-title {
+    text-align: center;
     font-size: var(--h3-font-size);
     font-weight: var(--font-medium);
     margin-bottom: var(--mb-1);
@@ -89,8 +91,9 @@
 
 .services__modal-description {
     font-size: var(--small-font-size);
-    padding: 0 3.5rem;
+    padding: 0 1.5rem;
     margin-bottom: var(--mb-2);
+    text-align: justify;
 }
 
 .services__modal-services {
@@ -119,13 +122,13 @@
 }
 
 /* breakpoints */
-@media screen and (max-width: 992px){
+@media screen and (max-width: 992px) {
     .services__container {
         grid-template-columns: repeat(3, 218px);
     }
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
     .services__container {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -139,7 +142,7 @@
     }
 }
 
-@media screen and (max-width: 576px){
+@media screen and (max-width: 576px) {
     .services__modal-content {
         padding: 4.5rem 1.5rem 2.5rem;
     }
@@ -149,7 +152,7 @@
     }
 }
 
-@media screen and (max-width: 350px){
+@media screen and (max-width: 350px) {
     .services__container {
         grid-template-columns: max-content;
     }
@@ -161,50 +164,63 @@
 
 /* Define animation for the section title */
 @keyframes fadeIn {
-    0% { opacity: 0; transform: translateY(20px); }
-    100% { opacity: 1; transform: translateY(0); }
-  }
-  
-  .services__title {
-    animation: fadeIn 1s ease-out;
-  }
-  
-  /* Animation for each service card */
-  @keyframes slideIn {
-    0% { opacity: 0; transform: translateX(-30px); }
-    100% { opacity: 1; transform: translateX(0); }
-  }
-  
-  .services__content {
-    animation: slideIn 0.6s ease-out;
-  }
-  
-  /* Animation for the modal */
-  @keyframes fadeInModal {
-    0% { opacity: 0; transform: scale(0.8); }
-    100% { opacity: 1; transform: scale(1); }
-  }
-  
-  .services__modal {
-    animation: fadeInModal 0.4s ease-out;
-  }
-  
-  /* Make the section fade in when in the viewport */
-  .services.active-section {
-    opacity: 1;
-    transition: opacity 1s ease-in;
-  }
-  
-  /* Ensure initial opacity is 0 before section is in viewport */
-  .services {
-    opacity: 0;
-    transition: opacity 1s ease-out;
-  }
-  
-  /* Responsive Design for smaller screens */
-  @media screen and (max-width: 768px) {
-    .services__container {
-      grid-template-columns: 1fr;
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
     }
-  }
-  
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.services__title {
+    animation: fadeIn 1s ease-out;
+}
+
+/* Animation for each service card */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.services__content {
+    animation: slideIn 0.6s ease-out;
+}
+
+/* Animation for the modal */
+@keyframes fadeInModal {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.services__modal {
+    animation: fadeInModal 0.4s ease-out;
+}
+
+/* Let Framer Motion handle section visibility */
+.services {
+    opacity: 1;
+}
+
+/* Responsive Design for smaller screens */
+@media screen and (max-width: 768px) {
+    .services__container {
+        grid-template-columns: 1fr;
+    }
+}

@@ -6,9 +6,11 @@
 
 .skills__content {
     background-color: var(--container-color);
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border-color);
+    backdrop-filter: blur(12px);
     padding: 2rem 4rem;
     border-radius: 1.25rem;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease, border-color 0.4s ease;
 }
 
 .skills__title {
@@ -47,24 +49,24 @@
 }
 
 /* breakpoints */
-@media screen and (max-width: 992px){
+@media screen and (max-width: 992px) {
     .skills__container {
         grid-template-columns: max-content;
         row-gap: 2rem;
     }
 }
 
-@media screen and (max-width: 576px){
+@media screen and (max-width: 576px) {
     .skills__container {
         grid-template-columns: 1fr;
     }
-    
+
     .skills__content {
         padding: 1.5rem;
     }
 }
 
-@media screen and (max-width: 350px){
+@media screen and (max-width: 350px) {
     .skills__box {
         column-gap: 1.25rem;
     }

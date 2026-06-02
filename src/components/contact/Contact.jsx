@@ -32,14 +32,12 @@ const Contact = () => {
       }
     )
       .then(async (res) => {
-        // Try to parse JSON if present, but don't fail success just because body isn't JSON
         let data = null;
         const ct = res.headers.get('content-type') || '';
         try {
           if (ct.includes('application/json')) {
             data = await res.json();
           } else {
-            // Read text to avoid stream locking; ignore content
             data = await res.text();
           }
         } catch (_) {}
@@ -59,7 +57,6 @@ const Contact = () => {
         toast.success('Sent successfully ✅', { icon: '📨' });
       })
       .catch((error) => { 
-        // Keep the values so the user can try again, or clear if you prefer
         toast.error(error?.message || 'Failed to send ❌');
       });
   };
@@ -69,8 +66,9 @@ const Contact = () => {
       className="contact section"
       id="contact"
       initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true, amount: 0.15 }}
+      transition={{ duration: 0.8 }}
     >
       <h2 className="section__title">Get in touch</h2>
       <span className="section__subtitle">Contact Me</span>
@@ -78,18 +76,18 @@ const Contact = () => {
       <div className="contact__container container grid">
         <motion.div
           className="contact__content"
-          initial={{ opacity: 0, x: -100 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.7 }}
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.15 }}
+          transition={{ duration: 0.6 }}
         >
           <h3 className="contact__title">Talk to me</h3>
 
           <div className="contact__info">
             <motion.div
               className="contact__card"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
+              whileHover={{ y: -8, scale: 1.02, boxShadow: "0 10px 30px rgba(139, 92, 246, 0.15)", borderColor: "rgba(139, 92, 246, 0.4)" }}
+              transition={{ type: "spring", stiffness: 300, damping: 20 }}
             >
               <i className="bx bx-mail-send contact__card-icon"></i>
 
@@ -109,9 +107,8 @@ const Contact = () => {
 
             <motion.div
               className="contact__card"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
+              whileHover={{ y: -8, scale: 1.02, boxShadow: "0 10px 30px rgba(139, 92, 246, 0.15)", borderColor: "rgba(139, 92, 246, 0.4)" }}
+              transition={{ type: "spring", stiffness: 300, damping: 20 }}
             >
               <i className="bx bxl-whatsapp contact__card-icon"></i>
 
@@ -128,21 +125,19 @@ const Contact = () => {
 
         <motion.div
           className="contact__content"
-          initial={{ opacity: 0, x: 100 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.7 }}
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.15 }}
+          transition={{ duration: 0.6 }}
         >
           <h3 className="contact__title">Write me your project</h3>
 
-          <motion.form
+          <form
             className="contact__form"
             id="form"
             onSubmit={Submit}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.7, delay: 0.5 }}
           >
-            <motion.div className="contact__form-div">
+            <div className="contact__form-div">
               <label className="contact__form-tag">Name</label>
               <input
                 type="text"
@@ -153,9 +148,9 @@ const Contact = () => {
                 placeholder="Insert your name"
                 required
               />
-            </motion.div>
+            </div>
 
-            <motion.div className="contact__form-div">
+            <div className="contact__form-div">
               <label className="contact__form-tag">Email</label>
               <input
                 type="email"
@@ -166,9 +161,9 @@ const Contact = () => {
                 placeholder="Insert your email"
                 required
               />
-            </motion.div>
+            </div>
 
-            <motion.div className="contact__form-div contact__form-area">
+            <div className="contact__form-div contact__form-area">
               <label className="contact__form-tag">Description</label>
               <textarea
                 name="project"
@@ -180,18 +175,15 @@ const Contact = () => {
                 placeholder="Write your description"
                 required
               ></textarea>
-            </motion.div>
+            </div>
 
-            <motion.button
+            <button
               type="submit"
               className="button button--flex"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.7 }}
             >
               Send Message <i className="bx bxs-send button__icon"></i>
-            </motion.button>
-          </motion.form>
+            </button>
+          </form>
         </motion.div>
       </div>
     </motion.section>

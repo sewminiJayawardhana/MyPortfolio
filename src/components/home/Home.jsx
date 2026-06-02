@@ -31,9 +31,13 @@ const Home = () => {
           transition={{ ease: "easeOut", duration: 1 }}
           style={{ transformOrigin: 'center top' }}
         >
-          <div 
+          <motion.div 
             className="home__img"
-          ></div>
+            initial={{ scale: 0, rotate: -180, opacity: 0 }}
+            animate={{ scale: 1, rotate: 0, opacity: 1 }}
+            transition={{ type: "spring", stiffness: 85, damping: 15, delay: 0.2 }}
+            whileHover={{ scale: 1.05, rotate: 3, boxShadow: "0 0 25px rgba(168, 85, 247, 0.6)" }}
+          ></motion.div>
           <Data />
         </motion.div>
       </div>

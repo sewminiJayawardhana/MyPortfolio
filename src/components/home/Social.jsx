@@ -1,13 +1,13 @@
-import  { useRef } from 'react';
+import { useRef } from 'react';
 import hoverSoundFile from '../../assets/effects/pop-sound-effect-226108.mp3';
 import './home.css'
 
 const Social = () => {
-  const hoverSound = useRef(new Audio(hoverSoundFile)); 
+  const hoverSound = useRef(new Audio(hoverSoundFile));
 
   const playSound = () => {
     if (hoverSound.current) {
-      hoverSound.current.currentTime = 0; 
+      hoverSound.current.currentTime = 0;
       hoverSound.current.play().catch((error) => {
         console.error('Error playing sound:', error);
       });
@@ -24,7 +24,7 @@ const Social = () => {
           target="_blank"
           rel="noopener noreferrer"
           className="home__social-icon"
-          onMouseEnter={playSound} 
+          onMouseEnter={playSound}
         >
           <i className="uil uil-github-alt"></i>
         </a>
