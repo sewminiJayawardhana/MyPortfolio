@@ -37,6 +37,8 @@
 
 .work__img {
     width: 295px;
+    height: 180px;
+    object-fit: cover;
     border-radius: 1rem;
     margin-bottom: var(--mb-1);
     transition: transform 0.4s ease;

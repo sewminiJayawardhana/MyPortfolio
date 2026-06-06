@@ -17,6 +17,7 @@ import cleverly from "../../assets/Cleverly.png";
 import CarRental from "../../assets/CarRental.png";
 import eventManagement from "../../assets/eventManagement.png";
 import clothingStore from "../../assets/clothingStore.png";
+import WriteHub from "../../assets/WriteHub.png";
 
 export const projectsData = [
     {
@@ -26,7 +27,6 @@ export const projectsData = [
         category: 'web',
         link: 'https://github.com/sewminiJayawardhana/BuyNow',
     },
-
     {
         id: 2,
         image: PowerFit,
@@ -34,29 +34,37 @@ export const projectsData = [
         category: 'web',
         link: 'https://github.com/sewminiJayawardhana/PowerFit',
     },
+
     {
         id: 3,
+        image: WriteHub,
+        title: 'WriteHub : Personal Blog',
+        category: 'web',
+        link: 'https://github.com/sewminiJayawardhana/WriteHub',
+    },
+    {
+        id: 4,
         image: EduCore,
         title: 'EduCore : Educational institution website',
         category: 'web',
         link: 'https://github.com/sewminiJayawardhana/EduCore',
     },
     {
-        id: 4,
+        id: 5,
         image: EBook,
         title: 'E-Book System : Library Management System',
         category: 'web',
         link: 'https://github.com/sewminiJayawardhana/Library_Management_System',
     },
     {
-        id: 5,
+        id: 6,
         image: QRCode,
         title: ' QR Generator : For form Data',
         category: 'web',
         link: 'https://github.com/sewminiJayawardhana/QR-Generator-',
     },
     {
-        id: 6,
+        id: 7,
         image: TaskManager,
         title: 'Task Manager',
         category: 'web',
@@ -64,7 +72,7 @@ export const projectsData = [
     },
     
     {
-        id: 7,
+        id: 8,
         image: PerfectLeather,
         title: 'Leather_Products_Management_System',
         category: 'app',
@@ -72,14 +80,14 @@ export const projectsData = [
     },
 
     {
-        id: 8,
+        id: 9,
         image: EasyCounter,
         title: 'Word Counter App',
         category: 'app',
         link: 'https://github.com/sewminiJayawardhana/Easy-Counter',
     },
     {
-        id: 9,
+        id: 10,
         image: FitnessTracker,
         title: 'Fitness Tracker App',
         category: 'app',
@@ -87,70 +95,70 @@ export const projectsData = [
     },
    
     {
-        id: 10,
+        id: 11,
         image: Calculator,
         title: 'Simple Calculator',
         category: 'app',
         link: 'https://github.com/sewminiJayawardhana/Simple-Calculator-',
     },
     {
-        id: 11,
+        id: 12,
         image: CarRental,
         title: 'CeylonRide - Car Rental Mobile App UI Design',
         category: 'designs',
         link: 'https://www.figma.com/design/AXdDmlbEHkEJ46xTZcomeI/UI-UX-Vehicle-Renting-Service-Sewmini-Jayawardhana?node-id=0-1&t=kmkwlziY4DydsqSQ-1',
     },
     {
-        id: 12,
+        id: 13,
         image: eventManagement,
         title: 'Event Management App UI Design',
         category: 'designs',
         link: 'https://www.figma.com/design/21g5K7FsVgKQtFOcbFMpow/UI-UX-Design-for-Event-Management-Platform?node-id=0-1&t=ghvP2eXId55Ssgro-1',
     },
     {
-        id: 13,
+        id: 14,
         image: clothingStore,
         title: 'Clothing Store App UI Design',
         category: 'designs',
         link: 'https://www.figma.com/design/fI8J3Boq9iPhXqVuNNzUxc/Clothing-Store-UI?node-id=1-2&t=ghvP2eXId55Ssgro-1',
     },
     {
-        id: 14,
+        id: 15,
         image: foodDelivery,
         title: 'Food Delivery App UI Design',
         category: 'designs',
         link: 'https://www.figma.com/design/2HpiDJO2P3LDw8Em2kFZhf/Fodd-Delivery?node-id=0-1&p=f&t=0alXwL0jCyuZaiWW-0',
     },
     {
-        id: 15,
+        id: 16,
         image: Health_Care_App,
         title: 'Health Care Mobile App UI Design',
         category: 'designs',
         link: 'https://www.figma.com/design/nu14eHYwxrwUb2Sm0NDIlG/Untitled?node-id=0-1&p=f&t=BcPbBDFPF2ZuVII9-0',
     },
     {
-        id: 16,
+        id: 17,
         image: SmartLearning,
         title: 'Landing Page for Learning Platform',
         category: 'designs',
         link: 'https://www.figma.com/design/OwYuJjgaHWFl6WpA0udCSC/Daily-UI---003?node-id=0-1&p=f&t=UHkumwpIHTTP1eGi-0',
     },
     {
-        id: 17,
+        id: 18,
         image: cleverly,
         title: 'Consumer Reviews App UI Design',
         category: 'designs',
         link: 'https://www.figma.com/design/7KNP2bquyt5IAdN3ljWaFc/Cleverly_UI?t=Nj9Yx1hoYVKeC4vo-1',
     },
     {
-        id: 18,
+        id: 19,
         image: CeylonGrand,
         title: 'Hotel Site UI',
         category: 'designs',
         link: 'https://www.figma.com/design/JUtB7QnBDCsjjGdhQ7zHQ7/Hotel-UI?node-id=0-1&p=f&t=P7Y1uspcrdh1tNfz-0',
     },
     {
-        id: 19,
+        id: 20,
         image: LoginPage,
         title: 'Login Page UI',
         category: 'designs',
