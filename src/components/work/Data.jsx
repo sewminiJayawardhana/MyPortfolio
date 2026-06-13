@@ -13,7 +13,7 @@ import EduCore from "../../assets/EduCore.png";
 import EasyCounter from "../../assets/EasyCounter.png";
 import FitnessTracker from "../../assets/FitnessTracker.png";
 import Health_Care_App from "../../assets/Health_Care_App.png";
-import cleverly from "../../assets/Cleverly.png";
+import Cleverly from "../../assets/Cleverly.png";
 import CarRental from "../../assets/CarRental.png";
 import eventManagement from "../../assets/eventManagement.png";
 import clothingStore from "../../assets/clothingStore.png";
@@ -145,7 +145,7 @@ export const projectsData = [
     },
     {
         id: 18,
-        image: cleverly,
+        image: Cleverly,
         title: 'Consumer Reviews App UI Design',
         category: 'designs',
         link: 'https://www.figma.com/design/7KNP2bquyt5IAdN3ljWaFc/Cleverly_UI?t=Nj9Yx1hoYVKeC4vo-1',
