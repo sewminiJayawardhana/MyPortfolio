@@ -7,10 +7,10 @@
 }
 
 .home__content {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
     align-items: center;
-    justify-content: center;
+    column-gap: 3.5rem;
 }
 
 .home__img {
@@ -18,15 +18,15 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    box-shadow: inset 0 0 0 9px rgba(168, 85, 247, 0.4);
-    width: 300px;
-    height: 300px;
-    margin-bottom: 2rem;
+    box-shadow: inset 0 0 0 4px rgba(168, 85, 247, 0.4);
+    width: 250px;
+    height: 250px;
+    margin-bottom: 0;
     border-radius: 50%;
 }
 
 .home__data {
-    text-align: center;
+    text-align: justify;
 }
 
 .home__container {
@@ -37,12 +37,7 @@
     padding-top: 3.5rem;
 }
 
-.home__content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
+/* duplicate home__content layout definition removed */
 
 .verify-icon {
     width: 20px;
@@ -55,9 +50,7 @@
     vertical-align: middle; 
 }  
   
-.home__data {
-    text-align: center;
-}
+/* duplicate home__data definition removed */
 
 .home__social {
     display: grid;
@@ -111,7 +104,7 @@
 .home__title {
     font-size: var(--big-font-size);
     margin-bottom: var(--mb-0-25);
-    margin-left: 25px;
+    margin-left: 0;
     margin-top: -15px;
 }
 
@@ -126,17 +119,17 @@
 .home__description {
     margin-bottom: var(--mb-3);
     margin-top: -8px;
-    margin-left: 15px;
+    margin-left: 0;
 }
 
 @media screen and (max-width: 992px){
     .home__content {
-        grid-template-columns: 100px repeat(2, 1fr);
-        column-gap: 1.25rem;
+        grid-template-columns: 1.1fr 0.9fr;
+        column-gap: 1.5rem;
     }
     
     .home__subtitle {
-        padding-left: 3.75rem;
+        padding-left: 0;
         margin-bottom: var(--mb-1);
     }
 
@@ -153,13 +146,24 @@
     .home__img {
         width: 250px;
         height: 250px;
-        box-shadow: inset 0 0 0 8px rgba(168, 85, 247, 0.4);
     }
 }
 
 @media screen and (max-width: 768px) {
+    .home__content {
+        grid-template-columns: 1fr;
+        row-gap: 2rem;
+        justify-items: center;
+    }
+
     .home__img {
+        order: -1;
         margin-top: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .home__data {
+        text-align: center;
     }
 
     .home__title {
@@ -200,6 +204,10 @@
     .home__social-icon:hover {
         transform: scale(1.1); 
     }
+
+    .home__cv-container {
+        justify-content: center;
+    }
 }
 
 @media screen and (max-width: 350px) {
@@ -231,4 +239,10 @@
         text-align: center; 
         margin-top: var(--mb-1); 
     }
+}
+
+.home__cv-container {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 2rem;
 }
